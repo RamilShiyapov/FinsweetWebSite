@@ -1,0 +1,665 @@
+@import url("Common.css");
+@import url("../components/Header/Header.css");
+@import url("../components/Footer/Footer.css");
+
+.PrimaryPost {
+  width: 100%;
+  height: 45rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ColumnName {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  font: normal 600 1rem "InterRegular";
+}
+
+.PrimaryPost .ColumnName {
+  color: white;
+}
+
+.PrimaryPost a {
+  color: var(--Yellow);
+}
+
+.PrimaryPost::before {
+  content: "";
+  background: radial-gradient(
+    30.56% 76.04% at 74.58% 0%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  width: 100%;
+  height: 45rem;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.Inner {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.InnerColumn {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.PrimaryPost .Inner {
+  padding: var(--HeaderPadding);
+}
+
+.PrimaryPost h1 {
+  max-height: 8rem;
+  overflow: hidden;
+}
+
+.PrimaryPostAbout {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.PostInformation {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: white;
+  white-space: nowrap;
+  font: normal 400 1rem "InterRegular";
+}
+
+.PrimaryPost .Text {
+  color: white;
+  max-width: 30rem;
+  overflow: hidden;
+}
+
+.PrimaryPostPreview {
+  width: 100%;
+  height: 45rem;
+  position: absolute;
+}
+
+.PrimaryPostPreview img {
+  width: 100%;
+  height: 45rem;
+  object-fit: cover;
+}
+
+.SelectedPosts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: var(--MainPadding);
+}
+
+.SelectedPostContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.SelectedPostContainer .Inner {
+  height: 100%;
+  justify-content: center;
+  padding: unset;
+}
+
+.SelectedPost {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 0.1rem solid var(--MediumGrey);
+  padding: 1rem;
+}
+
+.SelectedPost img:first-child {
+  object-fit: cover;
+}
+
+.SelectedPost .PostInformation {
+  color: var(--DarkGrey);
+  font-size: 0.875rem;
+}
+
+.SelectedPost h3 {
+  max-width: unset;
+  max-height: 3rem;
+  overflow: hidden;
+}
+
+.SelectedPost .Text {
+  max-height: 4rem;
+  overflow: hidden;
+}
+
+.AllPosts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+:where(.AllPosts) .ListColumn,
+:where(.AllPosts) .ListColumnItem {
+  width: 100%;
+  gap: unset;
+}
+
+.AllPostsHeader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SmallPost {
+  background-color: white;
+  width: 100%;
+  min-height: 12rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.SmallPost:hover {
+  background-color: var(--LightYellow);
+  cursor: pointer;
+}
+
+.SmallPost .PostInformation {
+  color: var(--DarkGrey);
+}
+
+.SmallPost h4 {
+  max-width: unset;
+  max-height: 4rem;
+  overflow: hidden;
+}
+
+.About {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--MainPadding);
+}
+
+.About meter {
+  width: 85%;
+  height: 1.5rem;
+}
+
+.About meter::-webkit-meter-bar {
+  background-color: var(--Purple);
+  width: 100%;
+  height: 1.5rem;
+  border: unset;
+  border-radius: unset;
+}
+
+.AboutContent {
+  background-color: var(--Lavender);
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.AboutContent .Text {
+  max-width: 30rem;
+  overflow: hidden;
+}
+
+.About .ColumnName {
+  color: var(--Black);
+}
+
+.About a {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.Categories {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--MainPadding);
+}
+
+.Categories .ListRow {
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.CategoriesCard {
+  min-width: 18.5rem;
+  min-height: 14.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  border: 0.1rem solid rgb(109 110 118 / 30%);
+}
+
+.CategoriesCard:hover {
+  background-color: var(--Yellow);
+  border-color: var(--Yellow);
+}
+
+.CategoriesCardIcon {
+  background-color: var(--LightYellow);
+  fill: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.375rem;
+}
+
+.CategoriesCard:hover .CategoriesCardIcon {
+  background-color: white;
+}
+
+.CategoriesCard .Text {
+  max-width: 14.5rem;
+}
+
+.SpecialPost {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  padding: var(--MainPadding);
+}
+
+.SpecialPost img:first-child {
+  width: 60rem;
+  height: 49rem;
+  object-fit: cover;
+}
+
+.SpecialPostContent {
+  background-color: white;
+  max-width: 50rem;
+  min-height: 36.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
+  padding: 5rem;
+}
+
+.SpecialPostContent h1 {
+  color: var(--Black);
+}
+
+.ListAuthors {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--MainPadding);
+}
+
+.ListAuthors .ListRow {
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Author {
+  background-color: var(--LightGrey);
+  min-width: 18.75rem;
+  min-height: 25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Author:hover {
+  background-color: var(--LightYellow);
+  cursor: pointer;
+}
+
+.Author:active {
+  opacity: 0.5;
+}
+
+.Author img:first-child {
+  width: 8rem;
+  height: 8rem;
+}
+
+.AuthorSocials {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.AuthorSocials .SocialIcon:hover path {
+  fill: rgb(109 110 118 / 70%);
+}
+
+.Featured {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: var(--MainPadding);
+}
+
+.FeaturedContent {
+  width: 100%;
+  display: flex;
+  gap: 0.2rem;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Featured .Text {
+  color: var(--MediumGrey);
+}
+
+.FeaturedBottom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Featured h4 {
+  color: var(--MediumGrey);
+  letter-spacing: unset;
+}
+
+.FeaturedBottom .ListRow {
+  gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Testimonials {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: var(--MainPadding);
+}
+
+.Slider {
+  background-color: var(--LightYellow);
+  max-width: 80rem;
+  min-height: 29rem;
+  height: auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+
+.Testimonials .Inner:not(.Testimonials .Inner:last-child) {
+  border-right: 0.1rem solid rgb(109 110 118 / 40%);
+}
+
+.Testimonials h2 {
+  max-width: 21.6rem;
+}
+
+.Testimonials .Text {
+  max-width: 22rem;
+}
+
+.Testimonials h4 {
+  max-width: 29.3rem;
+}
+
+.SliderBottom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.Profile img:first-child {
+  width: 3rem;
+  height: 3rem;
+}
+
+.ProfileInformation {
+  display: flex;
+  gap: 0.1rem;
+  flex-direction: column;
+}
+
+.SliderButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.SliderButton {
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.SliderButton:hover {
+  background-color: var(--Black);
+  transform: scale(1.1);
+}
+
+.SliderButton:active {
+  opacity: 0.5;
+}
+
+.SliderButton:first-child:hover path {
+  fill: white;
+}
+
+.SliderButton:last-child {
+  background-color: var(--Black);
+}
+
+.SliderButton:last-child path {
+  fill: white;
+}
+
+.JoinTeam {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--MainPadding);
+}
+
+.JoinTeamContent {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.JoinTeam h2,
+.JoinTeam .Text {
+  max-width: 25rem;
+  text-align: center;
+}
+
+.JoinTeam .Inner {
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .About {
+    padding: unset;
+  }
+
+  .AboutContent {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 991px) {
+  .PrimaryPost .Inner {
+    padding: 1rem;
+  }
+
+  .SelectedPosts {
+    padding: 3rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .SelectedPost {
+    width: 100%;
+  }
+
+  .SpecialPost {
+    padding: 0rem;
+  }
+
+  .AboutContent {
+    padding: 1rem;
+  }
+
+  .ListAuthors {
+    padding: unset;
+  }
+
+  .FeaturedBottom {
+    gap: 1rem;
+  }
+
+  .FeaturedBottom .ListRow {
+    gap: 1rem;
+  }
+
+  .Testimonials {
+    padding: unset;
+  }
+
+  .Testimonials .Inner:first-child {
+    text-align: center;
+  }
+
+  .Slider {
+    width: 100vw;
+    padding: 1rem;
+  }
+
+  .Slider .Inner:nth-child(2) {
+    height: auto;
+  }
+
+  .SliderColumn {
+    text-align: center;
+  }
+}
+
+@media (max-width: 912px) {
+  .Testimonials .Inner:not(.Testimonials .Inner:last-child) {
+    border: unset;
+  }
+}
+
+@media (max-width: 615px) {
+  .SliderBottom {
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .Profile {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 580px) {
+  .SpecialPost {
+    flex-direction: column;
+  }
+
+  .SpecialPostContent {
+    position: static;
+  }
+
+  .SpecialPostContent h1 {
+    max-height: 18rem;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 458px) {
+  .FeaturedContent {
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .FeaturedBottom {
+    gap: 2rem;
+  }
+}

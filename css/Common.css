@@ -1,0 +1,522 @@
+@font-face {
+  font-family: "InterRegular";
+  src: url("../fonts/InterRegular.woff2");
+}
+
+@font-face {
+  font-family: "SenBold";
+  src: url("../fonts/SenBold.woff2");
+}
+
+:root {
+  --HeaderHeight: 5rem;
+  --HeaderPadding: 0rem 5rem;
+  --MainPadding: 5rem 3rem;
+  --Yellow: rgb(255, 208, 80);
+  --Black: rgb(35, 37, 54);
+  --Purple: rgb(89, 46, 169);
+  --DarkGrey: rgb(76, 76, 76);
+  --MediumGrey: rgb(109, 110, 118);
+  --LightGrey: rgb(244, 244, 244);
+  --Lavender: rgb(244, 240, 248);
+  --LightYellow: rgb(251, 246, 234);
+}
+
+html,
+body {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+*:focus {
+  outline: none;
+}
+
+*::-moz-selection {
+  background-color: rgb(0 0 0 / 30%);
+}
+
+*::selection {
+  background-color: rgb(0 0 0 / 30%);
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0 0 0 / 80%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(0 0 0 / 60%);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::scrollbar {
+  width: 0.75rem;
+}
+
+::scrollbar-track {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+::scrollbar-thumb {
+  background-color: rgb(0 0 0 / 50%);
+}
+
+::scrollbar-thumb:hover {
+  background-color: rgb(0 0 0 / 80%);
+}
+
+::scrollbar-thumb:active {
+  background-color: rgb(0 0 0 / 60%);
+}
+
+::scrollbar-corner {
+  background-color: transparent;
+}
+
+picture,
+img,
+svg {
+  display: flex;
+}
+
+picture {
+  width: auto;
+  height: auto;
+}
+
+details summary,
+button,
+label,
+input:is(
+    [type="date"],
+    [type="file"],
+    [type="reset"],
+    [type="range"],
+    [type="radio"],
+    [type="color"],
+    [type="button"],
+    [type="submit"],
+    [type="checkbox"],
+    [type="datetime-local"]
+  ),
+::file-selector-button {
+  cursor: pointer;
+}
+
+button,
+input:is([type="button"], [type="submit"]) {
+  background-color: unset;
+  color: unset;
+  border: unset;
+  appearance: unset;
+  white-space: unset;
+}
+
+input[type="file"] {
+  color: white;
+  border: unset;
+  text-align: unset;
+  white-space: unset;
+  border-radius: unset;
+  font: normal 400 1rem "InterRegular";
+}
+
+input:is([type="text"], [type="password"], [type="email"], [type="search"]),
+[contenteditable] {
+  caret-color: rgb(27 127 204 / 80%);
+}
+
+input:is([type="text"], [type="password"], [type="email"], [type="search"]) {
+  background-color: rgb(255 255 255 / 5%);
+  height: 3.5rem;
+  color: white;
+  border: 0.1rem solid var(--DarkGrey);
+  padding: 1rem;
+}
+
+::placeholder {
+  color: var(--MediumGrey);
+  font: normal 400 1rem "InterRegular";
+}
+
+::file-selector-button {
+  background-color: rgb(39, 39, 39);
+  color: white;
+  margin: unset;
+  text-align: center;
+  margin-inline: unset;
+  padding: 0.375rem 0.75rem;
+  border: 0.2rem solid rgb(56, 55, 55);
+  font: normal 400 1.5rem "InterRegular";
+}
+
+::file-selector-button:hover {
+  opacity: 0.7;
+}
+
+::file-selector-button:active {
+  opacity: 0.5;
+}
+
+[contenteditable] {
+  padding: 1rem;
+  cursor: text;
+  border: 0.1rem solid rgb(27 127 204 / 80%);
+}
+
+img[alt] {
+  color: var(--Yellow);
+  font: normal 500 1rem "SenBold";
+}
+
+img,
+svg {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+q {
+  quotes: '"' '"';
+}
+
+a {
+  color: var(--Purple);
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: unset;
+  font: normal 400 1rem "InterRegular";
+}
+
+a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+a:active {
+  opacity: 0.5;
+  text-decoration: unset;
+}
+
+fieldset {
+  padding-block: unset;
+  margin-inline: unset;
+  padding-inline: unset;
+  min-inline-size: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: unset;
+  margin-inline: unset;
+}
+
+h1 {
+  max-width: 50rem;
+  color: white;
+  letter-spacing: 0.125rem;
+  font: normal 700 3.5rem/4rem "SenBold";
+}
+
+h2 {
+  max-width: 35rem;
+  color: var(--Black);
+  letter-spacing: 0.125rem;
+  font: normal 700 2.25rem/3rem "SenBold";
+}
+
+h3 {
+  max-width: 34rem;
+  color: var(--Black);
+  letter-spacing: 0.125rem;
+  font: normal 700 1.75rem "SenBold";
+}
+
+h4 {
+  max-width: 23rem;
+  color: var(--Black);
+  letter-spacing: 0.125rem;
+  font: normal 700 1.5rem/2rem "SenBold";
+}
+
+menu {
+  list-style: none;
+  margin-block: unset;
+  margin-inline: unset;
+  padding-inline: unset;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 60%);
+}
+
+dialog {
+  background-color: unset;
+  width: unset;
+  color: unset;
+  height: unset;
+  border: unset;
+  padding: unset;
+  position: unset;
+  inset-inline: unset;
+}
+
+noscript {
+  background-color: rgb(17, 29, 40);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 51;
+}
+
+noscript span {
+  color: white;
+  font: normal 600 2rem "InterRegular";
+}
+
+.MobileMenuButton {
+  display: none;
+}
+
+.Navigation {
+  display: flex;
+  align-items: center;
+}
+
+.ListRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ListRowItem {
+  display: flex;
+}
+
+.ListColumn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ListColumnItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.Menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.MainButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+}
+
+.MainButton:hover {
+  opacity: 0.7;
+  text-decoration: unset;
+}
+
+.MainButton:active {
+  opacity: 0.5;
+}
+
+.MainButtonText {
+  color: black;
+  white-space: nowrap;
+  font: normal 700 1.125rem "SenBold";
+}
+
+.MainButton.WhiteButton {
+  background-color: white;
+}
+
+.MainButton.YellowButton {
+  background-color: var(--Yellow);
+}
+
+.Text {
+  color: var(--MediumGrey);
+  font: normal 400 1rem/1.7rem "InterRegular";
+}
+
+.SubscribeForm {
+  height: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.SocialIcon {
+  fill: none;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.SocialIcon path {
+  fill: rgb(109, 110, 118);
+  opacity: 0.6;
+}
+
+.SocialIcon:hover path {
+  fill: white;
+  opacity: 1;
+}
+
+.Address {
+  opacity: 0.7;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  font: normal 400 1rem "InterRegular";
+}
+
+@media (max-width: 991px) {
+  :root {
+    --HeaderHeight: 3.5rem;
+  }
+
+  .Menu {
+    background-color: rgb(36 36 36 / 50%);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    top: -100%;
+    left: 0rem;
+    z-index: 5;
+    align-items: unset;
+    justify-content: unset;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .Menu .Navigation {
+    flex-direction: column;
+  }
+
+  .Menu .ListRow {
+    width: 100%;
+    gap: unset;
+    align-items: unset;
+    flex-direction: column;
+  }
+
+  .MobileMenuButton {
+    background: linear-gradient(
+      to bottom,
+      transparent calc(50% - 0.05rem),
+      white calc(50% - 0.05rem),
+      white calc(50% + 0.05rem),
+      transparent calc(50% + 0.05rem)
+    );
+    appearance: none;
+    width: 2rem;
+    height: 1.25rem;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 6;
+  }
+
+  .MobileMenuButton:hover {
+    opacity: 0.8;
+  }
+
+  .MobileMenuButton:active {
+    opacity: 0.5;
+  }
+
+  .MobileMenuButton::before,
+  .MobileMenuButton::after {
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 0.125rem;
+    pointer-events: none;
+    position: relative;
+  }
+
+  .MobileMenuButton:checked {
+    background: unset;
+    transform: translate(0rem, -0.375rem);
+  }
+
+  .MobileMenuButton:checked::before {
+    transform: rotate(45deg) translate(0.8rem, 0.8rem);
+  }
+
+  .MobileMenuButton:checked::after {
+    transform: rotate(-45deg);
+  }
+
+  .MobileMenuButton:checked ~ .Menu {
+    top: var(--HeaderHeight);
+  }
+
+  [data-HiddenHeader]:checked ~ .Menu {
+    top: 0rem;
+  }
+}

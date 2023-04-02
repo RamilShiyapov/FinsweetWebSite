@@ -1,0 +1,94 @@
+@import url("../../css/Common.css");
+
+.Footer {
+  background-color: var(--Black);
+  width: 100%;
+  height: 100%;
+  padding: 2rem 5rem;
+}
+
+.Footer .Inner {
+  padding: unset;
+}
+
+.FooterTop {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FooterTop::before {
+  content: "{Finsweet";
+  color: white;
+  font: normal 700 1.5rem "SenBold";
+}
+
+.FooterMain {
+  background-color: rgb(255 255 255 / 5%);
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-flow: row wrap-reverse;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  position: relative;
+}
+
+.Footer h2 {
+  color: white;
+}
+
+.SubscribeForm input {
+  width: 20vmax;
+}
+
+.FooterBottom {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 1388px) {
+  .FooterMain {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .Footer {
+    padding: 1rem;
+  }
+
+  .FooterMain {
+    padding: 2rem 0rem;
+  }
+
+  .Footer h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .Footer h2 {
+    font-size: revert;
+    line-height: revert;
+  }
+
+  .FooterBottom {
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 450px) {
+  .SubscribeForm {
+    flex-direction: column;
+  }
+}

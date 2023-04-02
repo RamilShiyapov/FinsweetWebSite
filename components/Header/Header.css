@@ -1,0 +1,60 @@
+@import url("../../css/Common.css");
+
+.Header {
+  background-color: var(--Black);
+  width: 100%;
+  min-height: var(--HeaderHeight);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0rem;
+  z-index: 50;
+  padding: var(--HeaderPadding);
+}
+
+.Header::before {
+  content: "{Finsweet";
+  color: white;
+  font: normal 700 1.5rem "SenBold";
+}
+
+.Header .ListRow {
+  gap: unset;
+}
+
+.HeaderLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 1.25rem;
+}
+
+.HeaderLink .Text {
+  color: white;
+}
+
+.HeaderLink:hover {
+  text-decoration: unset;
+}
+
+@media (max-width: 991px) {
+  .Header {
+    padding: 1rem;
+  }
+
+  .HeaderLink {
+    width: 100%;
+    height: 4rem;
+    justify-content: unset;
+    transition: 0.5s ease;
+  }
+
+  .Menu .HeaderLink {
+    padding: unset;
+  }
+
+  .HeaderLink:hover .LinkText {
+    transform: translateX(1rem);
+  }
+}
